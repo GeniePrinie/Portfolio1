@@ -1,0 +1,88 @@
+:root {
+  --white: rgb(255, 255, 255);
+  --brown: rgb(129, 41, 41);
+  --backgroundcolor: rgb(240, 230, 232);
+  --red: rgb(238, 42, 88);
+  --babypink: rgb(240, 164, 185);
+  --pink: rgb(240, 88, 126);
+  --cardshadow: rgba(240, 164, 185, 0.5);
+}
+/*  var(--color) */
+
+body {
+  background-color: var(--backgroundcolor);
+}
+
+h1,
+h2 {
+  font-family: "Chivo", sans-serif;
+  line-height: 1.7;
+}
+
+h1 {
+  font-size: 60px;
+  color: var(--red);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+h2 {
+  text-align: center;
+  color: var(--brown);
+}
+
+p {
+  font-family: "Courier Prime", monospace;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--brown);
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+a {
+  font-family: "Courier Prime", monospace;
+  font-size: 18px;
+  line-height: 1.7;
+  display: block;
+  color: var(--pink);
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+a:hover {
+  color: var(--babypink);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4%;
+  justify-content: center;
+}
+
+.card {
+  width: 350px;
+  height: 650px;
+  border: 2px solid var(--pink);
+  border-radius: 10px;
+  margin-top: 5%;
+  box-shadow: 12px 12px 2px 1px var(--cardshadow);
+  background-color: var(--white);
+}
+
+.card img {
+  width: 350px;
+  border-radius: 10px;
+  transition: transform ease-in-out 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 40px;
+  }
+}
